@@ -1,4 +1,3 @@
-const idSpan = document.querySelector(".id");
 const detailsContainer = document.querySelector(".details");
 const title = document.querySelector("title");
 
@@ -22,7 +21,6 @@ async function characterDisplay() {
     const data = await response.json();
     console.log(data);
 
-    idSpan.innerHTML += id;
     title.innerHTML = `${data.name}`;
 
     detailsContainer.innerHTML += `<div class="char_det">

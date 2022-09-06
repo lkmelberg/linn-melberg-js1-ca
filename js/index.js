@@ -17,7 +17,7 @@ async function fetchCharacters() {
       charactersContainer.innerHTML += `<a href="details.html?id=${character.id}" class="card">
                                                 <div class="image" style="background-image: url(${character.image});"></div>
                                                 <div class="details">
-                                                    <h4 class="name">${character.name}</h4>    
+                                                    <h4 class="char-name">${character.name}</h4>    
                                                     <p class"gender">Gender: ${character.gender}</p>                                                                                                                                                    
                                                 </div>
                                             </a>`;
@@ -25,7 +25,7 @@ async function fetchCharacters() {
     console.log("Success");
   } catch (error) {
     console.log(error);
-    charactersContainer.innerHTML = message("error", error);
+    charactersContainer.innerHTML = message("error");
   }
 }
 
