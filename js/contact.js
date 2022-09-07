@@ -19,18 +19,18 @@ function checkIfInputValidated(event) {
     theNameError.style.display = "block";
   }
 
-  if (checkLength(subject.value, 1)) {
+  if (checkLength(subject.value, 10)) {
     subjectError.style.display = "none";
   } else {
     subjectError.style.display = "block";
   }
 
-  if (validateEmail(email.value)) {
+  if (validateEmail(email.value, 1)) {
     emailError.style.display = "none";
   } else {
     emailError.style.display = "block";
   }
-  if (checkLength(address.value, 1)) {
+  if (checkLength(address.value, 25)) {
     addressError.style.display = "none";
   } else {
     addressError.style.display = "block";
@@ -38,9 +38,9 @@ function checkIfInputValidated(event) {
 
   if (
     checkLength(theName.value, 1) &&
-    checkLength(subject.value, 1) &&
+    checkLength(subject.value, 10) &&
     checkLength(email.value, 1) &&
-    checkLength(address.value, 1) &&
+    checkLength(address.value, 25) &&
     validateEmail(email.value)
   ) {
     contactMessage.innerHTML =
